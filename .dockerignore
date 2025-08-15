@@ -1,0 +1,10 @@
+node_modules
+.git
+*.log
+dist
+tmp
+.DS_Store
+assets
+README.md
+Dockerfile
+!assets/logo.png
