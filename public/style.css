@@ -58,11 +58,11 @@ i {
     display: inline-block;
     font-style: normal;
     padding: 0 0.25em;
-    -webkit-transform: scale(0) translate3d(0, -2000px, 0);
-    -moz-transform: scale(0) translate3d(0, -2000px, 0);
-    -ms-transform: scale(0) translate3d(0, -2000px, 0);
-    -o-transform: scale(0) translate3d(0, -2000px, 0);
-    transform: scale(0) translate3d(0, -2000px, 0);
+    -webkit-transform: scale(0) translate3d(0, -20000px, 0);
+    -moz-transform: scale(0) translate3d(0, -20000px, 0);
+    -ms-transform: scale(0) translate3d(0, -20000px, 0);
+    -o-transform: scale(0) translate3d(0, -20000px, 0);
+    transform: scale(0) translate3d(0, -20000px, 0);
     color: #39FF14;
     text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 40px #39FF14;
     background: #131313;
@@ -70,15 +70,15 @@ i {
 }
 
 i.fly-in-out {
-    -webkit-animation: fly-in-out 3s infinite ease-in-out;
-    -moz-animation: fly-in-out 3s infinite ease-in-out;
-    -o-animation: fly-in-out 3s infinite ease-in-out;
-    animation: fly-in-out 3s infinite ease-in-out;
+    -webkit-animation: fly-in-out 5s infinite ease-in-out;
+    -moz-animation: fly-in-out 5s infinite ease-in-out;
+    -o-animation: fly-in-out 5s infinite ease-in-out;
+    animation: fly-in-out 5s infinite ease-in-out;
 }
 
 @-webkit-keyframes fly-in-out {
     0% {
-        -webkit-transform: scale(0) translate3d(0, -1000px, 0);
+        -webkit-transform: scale(0) translate3d(0, -10000px, 0);
         background: rgba(57, 255, 20, 0.1);
         box-shadow: 0 0 100px 100px rgba(57, 255, 20, 0.05);
         border-radius: 50%;
@@ -92,7 +92,7 @@ i.fly-in-out {
     }
     100% {
         color: transparent;
-        -webkit-transform: scale(0) translate3d(0, 1000px, 0);
+        -webkit-transform: scale(0) translate3d(0, 10000px, 0);
         background: rgba(57, 255, 20, 0.1);
         box-shadow: 0 0 100px 100px rgba(57, 255, 20, 0.05);
         border-radius: 50%;
@@ -101,7 +101,7 @@ i.fly-in-out {
 
 @-moz-keyframes fly-in-out {
     0% {
-        -moz-transform: scale(0) translate3d(0, -2000px, 0);
+        -moz-transform: scale(0) translate3d(0, -20000px, 0);
         background: rgba(57, 255, 20, 0.1);
         box-shadow: 0 0 100px 100px rgba(57, 255, 20, 0.05);
         border-radius: 50%;
@@ -115,7 +115,7 @@ i.fly-in-out {
     }
     100% {
         color: transparent;
-        -moz-transform: scale(0) translate3d(0, 2000px, 0);
+        -moz-transform: scale(0) translate3d(0, 20000px, 0);
         background: rgba(57, 255, 20, 0.1);
         box-shadow: 0 0 100px 100px rgba(57, 255, 20, 0.05);
         border-radius: 50%;
@@ -124,7 +124,7 @@ i.fly-in-out {
 
 @-o-keyframes fly-in-out {
     0% {
-        -o-transform: scale(0) translate3d(0, -2000px, 0);
+        -o-transform: scale(0) translate3d(0, -20000px, 0);
         background: rgba(57, 255, 20, 0.1);
         box-shadow: 0 0 100px 100px rgba(57, 255, 20, 0.05);
         border-radius: 50%;
@@ -138,7 +138,7 @@ i.fly-in-out {
     }
     100% {
         color: transparent;
-        -o-transform: scale(0) translate3d(0, 2000px, 0);
+        -o-transform: scale(0) translate3d(0, 20000px, 0);
         background: rgba(57, 255, 20, 0.1);
         box-shadow: 0 0 100px 100px rgba(57, 255, 20, 0.05);
         border-radius: 50%;
@@ -147,7 +147,7 @@ i.fly-in-out {
 
 @keyframes fly-in-out {
     0% {
-        transform: scale(0) translate3d(0, -2000px, 0);
+        transform: scale(0) translate3d(0, -20000px, 0);
         background: rgba(57, 255, 20, 0.1);
         box-shadow: 0 0 100px 100px rgba(57, 255, 20, 0.05);
         border-radius: 50%;
@@ -161,7 +161,7 @@ i.fly-in-out {
     }
     100% {
         color: transparent;
-        transform: scale(0) translate3d(0, 2000px, 0);
+        transform: scale(0) translate3d(0, 20000px, 0);
         background: rgba(57, 255, 20, 0.1);
         box-shadow: 0 0 100px 100px rgba(57, 255, 20, 0.05);
         border-radius: 50%;
