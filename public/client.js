@@ -8,7 +8,7 @@ function apiCall() {
     })
         .then(response => response.text())
         .then(html => {
-            const p = document.getElementsByTagName('p')[0];
+            const p = document.getElementById('ip-display');
             p.innerHTML = html;
             const chars = p.getElementsByTagName('i');
             if (chars.length > 0) addEffect(chars, 0);

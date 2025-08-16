@@ -8,8 +8,7 @@ node_modules
 *.log
 *.tmp
 
-# Ignore local assets not needed in image
-assets/logo.png
+!assets/logo.png
 
 # Ignore editor/project files
 *.swp
