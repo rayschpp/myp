@@ -49,3 +49,15 @@ at last, we convert to favicon:
 ```shell
 ffmpeg -i /tmp/rounded.png -vfy "scale=64:64:flags=lanczos" public/favicon.ico
 ```
+
+## API Usage
+
+### /api/ip
+
+- Method: GET
+- Headers: `X-API-Key` (required, injected into client.js)
+- Response: HTML string with each character of your IP address wrapped in <i> tags
+- Error: 403 Forbidden if API key is missing, invalid, or already used
+
+The API key is injected into the client-side code and is valid for a single use only.
+

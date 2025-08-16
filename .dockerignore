@@ -1,10 +1,26 @@
-node_modules
+# Ignore version control
 .git
+
+# Ignore local node modules (if ever added)
+node_modules
+
+# Ignore logs and temp files
 *.log
-dist
-tmp
+*.tmp
+
+# Ignore local assets not needed in image
+assets/logo.png
+
+# Ignore editor/project files
+*.swp
+*.swo
+*.bak
 .DS_Store
-assets
-README.md
-Dockerfile
-!assets/logo.png
+.idea/
+.vscode/
+
+# Ignore test and config files (if any)
+*.test.js
+*.spec.js
+coverage/
+
