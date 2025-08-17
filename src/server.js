@@ -34,6 +34,13 @@ function sendSecurityHeaders(res) {
     res.setHeader('Content-Security-Policy', "default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:");
 }
 
+// --- CORS Helper ---
+function setCORSHeaders(res) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'X-API-Key, Content-Type');
+}
+
 // --- Static File Serving ---
 function serveStaticFile(res, filePath) {
     fs.readFile(filePath, (err, data) => {
@@ -88,6 +95,7 @@ const server = http.createServer((req, res) => {
     try {
         const parsedUrl = url.parse(req.url);
         sendSecurityHeaders(res);
+        setCORSHeaders(res);
 
         // --- Security: Robust IP extraction ---
         let ipList = req.headers['x-forwarded-for']?.split(',').map(ip => ip.trim()) || [];
@@ -109,7 +117,6 @@ const server = http.createServer((req, res) => {
             serveApiRequest(req.headers['x-api-key'], ip, res);
             return;
         }
-
         // --- Security: Path traversal protection ---
         let filePath = '.' + parsedUrl.pathname;
         if (filePath === './') filePath = './index.html';
