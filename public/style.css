@@ -21,6 +21,26 @@ https://codepen.io/neilcarpenter/pen/kOJBpv
 - Adjusted colors and font size
  */
 
+:root {
+    --neon-green: #39FF14;
+    --bg-dark: #0f1c0f;
+    --animation-duration: 5s;
+    --center-bg: rgba(57, 255, 20, 0.1);
+    --center-bg-shadow: rgba(57, 255, 20, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-dark: #0f1c0f;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-dark: #f8f8f8;
+    }
+}
+
 html, body {
     -webkit-font-smoothing: antialiased;
     font-family: 'NovaFlat-Regular', Helvetica, Arial, sans-serif;
@@ -33,7 +53,7 @@ html, body {
 }
 
 html {
-    background-color: #0f1c0f;
+    background-color: var(--bg-dark);
 }
 
 body {
@@ -63,29 +83,29 @@ i {
     -ms-transform: scale(0) translate3d(0, -20000px, 0);
     -o-transform: scale(0) translate3d(0, -20000px, 0);
     transform: scale(0) translate3d(0, -20000px, 0);
-    color: #39FF14;
-    text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 40px #39FF14;
+    color: var(--neon-green);
+    text-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green), 0 0 20px var(--neon-green), 0 0 40px var(--neon-green);
     background: #131313;
     border-radius: 50%;
 }
 
 i.fly-in-out {
-    -webkit-animation: fly-in-out 5s infinite ease-in-out;
-    -moz-animation: fly-in-out 5s infinite ease-in-out;
-    -o-animation: fly-in-out 5s infinite ease-in-out;
-    animation: fly-in-out 5s infinite ease-in-out;
+    -webkit-animation: fly-in-out var(--animation-duration) infinite ease-in-out;
+    -moz-animation: fly-in-out var(--animation-duration) infinite ease-in-out;
+    -o-animation: fly-in-out var(--animation-duration) infinite ease-in-out;
+    animation: fly-in-out var(--animation-duration) infinite ease-in-out;
 }
 
 @-webkit-keyframes fly-in-out {
     0% {
         -webkit-transform: scale(0) translate3d(0, -10000px, 0);
-        background: rgba(57, 255, 20, 0.1);
-        box-shadow: 0 0 100px 100px rgba(57, 255, 20, 0.05);
+        background: var(--center-bg);
+        box-shadow: 0 0 100px 100px var(--center-bg-shadow);
         border-radius: 50%;
     }
     15%, 85% {
-        color: #39FF14;
-        text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 40px #39FF14;
+        color: var(--neon-green);
+        text-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green), 0 0 20px var(--neon-green), 0 0 40px var(--neon-green);
         -webkit-transform: scale(1) translate3d(0, 0, 0);
         background: transparent;
         box-shadow: none;
@@ -93,8 +113,8 @@ i.fly-in-out {
     100% {
         color: transparent;
         -webkit-transform: scale(0) translate3d(0, 10000px, 0);
-        background: rgba(57, 255, 20, 0.1);
-        box-shadow: 0 0 100px 100px rgba(57, 255, 20, 0.05);
+        background: var(--center-bg);
+        box-shadow: 0 0 100px 100px var(--center-bg-shadow);
         border-radius: 50%;
     }
 }
@@ -102,13 +122,13 @@ i.fly-in-out {
 @-moz-keyframes fly-in-out {
     0% {
         -moz-transform: scale(0) translate3d(0, -20000px, 0);
-        background: rgba(57, 255, 20, 0.1);
-        box-shadow: 0 0 100px 100px rgba(57, 255, 20, 0.05);
+        background: var(--center-bg);
+        box-shadow: 0 0 100px 100px var(--center-bg-shadow);
         border-radius: 50%;
     }
     15%, 85% {
-        color: #39FF14;
-        text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 40px #39FF14;
+        color: var(--neon-green);
+        text-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green), 0 0 20px var(--neon-green), 0 0 40px var(--neon-green);
         -moz-transform: scale(1) translate3d(0, 0, 0);
         background: transparent;
         box-shadow: none;
@@ -116,8 +136,8 @@ i.fly-in-out {
     100% {
         color: transparent;
         -moz-transform: scale(0) translate3d(0, 20000px, 0);
-        background: rgba(57, 255, 20, 0.1);
-        box-shadow: 0 0 100px 100px rgba(57, 255, 20, 0.05);
+        background: var(--center-bg);
+        box-shadow: 0 0 100px 100px var(--center-bg-shadow);
         border-radius: 50%;
     }
 }
@@ -125,13 +145,13 @@ i.fly-in-out {
 @-o-keyframes fly-in-out {
     0% {
         -o-transform: scale(0) translate3d(0, -20000px, 0);
-        background: rgba(57, 255, 20, 0.1);
-        box-shadow: 0 0 100px 100px rgba(57, 255, 20, 0.05);
+        background: var(--center-bg);
+        box-shadow: 0 0 100px 100px var(--center-bg-shadow);
         border-radius: 50%;
     }
     15%, 85% {
-        color: #39FF14;
-        text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 40px #39FF14;
+        color: var(--neon-green);
+        text-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green), 0 0 20px var(--neon-green), 0 0 40px var(--neon-green);
         -o-transform: scale(1) translate3d(0, 0, 0);
         background: transparent;
         box-shadow: none;
@@ -139,8 +159,8 @@ i.fly-in-out {
     100% {
         color: transparent;
         -o-transform: scale(0) translate3d(0, 20000px, 0);
-        background: rgba(57, 255, 20, 0.1);
-        box-shadow: 0 0 100px 100px rgba(57, 255, 20, 0.05);
+        background: var(--center-bg);
+        box-shadow: 0 0 100px 100px var(--center-bg-shadow);
         border-radius: 50%;
     }
 }
@@ -148,13 +168,13 @@ i.fly-in-out {
 @keyframes fly-in-out {
     0% {
         transform: scale(0) translate3d(0, -20000px, 0);
-        background: rgba(57, 255, 20, 0.1);
-        box-shadow: 0 0 100px 100px rgba(57, 255, 20, 0.05);
+        background: var(--center-bg);
+        box-shadow: 0 0 100px 100px var(--center-bg-shadow);
         border-radius: 50%;
     }
     15%, 85% {
-        color: #39FF14;
-        text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 40px #39FF14;
+        color: var(--neon-green);
+        text-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green), 0 0 20px var(--neon-green), 0 0 40px var(--neon-green);
         transform: scale(1) translate3d(0, 0, 0);
         background: transparent;
         box-shadow: none;
@@ -162,8 +182,8 @@ i.fly-in-out {
     100% {
         color: transparent;
         transform: scale(0) translate3d(0, 20000px, 0);
-        background: rgba(57, 255, 20, 0.1);
-        box-shadow: 0 0 100px 100px rgba(57, 255, 20, 0.05);
+        background: var(--center-bg);
+        box-shadow: 0 0 100px 100px var(--center-bg-shadow);
         border-radius: 50%;
     }
 }
